@@ -9,7 +9,7 @@ public class Connection {
 	private  Connection() {
 	}
 
-	public static Connection getINSTANCE() {
+	public synchronized static Connection getINSTANCE() {
 		
 		if (INSTANCE == null) {
 			INSTANCE = new Connection();
